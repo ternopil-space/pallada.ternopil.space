@@ -34,9 +34,9 @@
 	},
 	"pageSeo": {
 		"/": {
-			"title": "Меню ресторану | Pallada Hotel",
-			"description": "Меню ресторану готелю Pallada у Тернополі: сніданки, основні страви, напої, десерти та сезонні пропозиції.",
-			"image": "/dish/cappuccino.webp"
+			"title": "Pallada Hotel — готель у Тернополі",
+			"description": "Pallada Hotel — комфортний готель у центрі Тернополя. Зручні номери, власний ресторан, безкоштовна парковка, спа-зона. Бронювання: +38 098 439 0909.",
+			"image": "/logo.png"
 		},
 		"/favorites": {
 			"title": "Улюблені страви | Pallada Hotel",

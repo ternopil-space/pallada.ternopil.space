@@ -51,7 +51,7 @@ export const appConfig: ApplicationConfig = {
 			},
 		}),
 		provideTranslate({
-			defaultLanguage: environment.defaultLanguage,
+			defaultLanguage: 'ua',
 			languages: environment.languages,
 			folder: '/i18n/',
 		}),

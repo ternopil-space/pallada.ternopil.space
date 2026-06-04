@@ -1,5 +1,5 @@
-import { DOCUMENT } from '@angular/common';
-import { ChangeDetectionStrategy, Component, effect, inject } from '@angular/core';
+import { DOCUMENT, isPlatformBrowser } from '@angular/common';
+import { ChangeDetectionStrategy, Component, effect, inject, PLATFORM_ID } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { Title } from '@angular/platform-browser';
 import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
@@ -22,6 +22,7 @@ export class App {
 	private readonly _canonicalService = inject(CanonicalService);
 	private readonly _document = inject(DOCUMENT);
 	private readonly _languageService = inject(LanguageService);
+	private readonly _platformId = inject(PLATFORM_ID);
 	private readonly _router = inject(Router);
 	private readonly _scrollService = inject(ScrollService);
 	private readonly _title = inject(Title);
@@ -34,6 +35,13 @@ export class App {
 	constructor() {
 		this._canonicalService.initialize();
 		this._scrollService.initialize();
+
+		if (isPlatformBrowser(this._platformId)) {
+			const stored = this._languageService.language();
+			if (!stored || !environment.languages.find((l) => l.code === stored)) {
+				void this._translateService.setLanguage('ua');
+			}
+		}
 
 		effect(() => {
 			const language = this._languageService.language();
