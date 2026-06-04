@@ -15,7 +15,7 @@ import { ScrollService } from './services/scroll.service';
 @Component({
 	selector: 'app-root',
 	imports: [RouterOutlet, TopbarComponent, FooterComponent],
-	template: '<app-topbar /><div class="pb-24"><router-outlet /></div><app-footer />',
+	template: '<app-topbar /><div class="pt-16 pb-24"><router-outlet /></div><app-footer />',
 	changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class App {

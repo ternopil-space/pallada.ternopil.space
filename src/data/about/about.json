@@ -1,71 +1,94 @@
 {
-	"eyebrow": "About us",
-	"title": "Hotel, restaurant, and cafe complex",
-	"description": "A comfortable place for stays, meals, meetings, and family celebrations with friendly service and practical guest facilities.",
+	"eyebrow": "Про готель",
+	"title": "Pallada Hotel — готель у Тернополі",
+	"description": "Комфортний готель із власним рестораном, безкоштовною парковкою та спа-зоною у центрі Тернополя.",
 	"tags": [
-		"Family and friends rest",
-		"Weddings, banquets, and birthdays",
-		"Conferences and business meetings"
+		"Готель у Тернополі",
+		"Ресторан та бар",
+		"Безкоштовна парковка"
 	],
 	"intro": {
-		"title": "Everything guests need in one place",
-		"text": "Our complex combines hospitality, food, events, and relaxation in one convenient location. Guests can come for a quiet meal, book a room, celebrate an important date, or organize a business meeting with support from our team.",
-		"image": "assets/images/about/intro.jpg"
+		"title": "Місце для відпочинку та гостинності",
+		"text": "Pallada Hotel — затишний готель у центрі Тернополя з власним рестораном, баром, безкоштовною парковкою та спа-зоною. До нас приїжджають туристи, бізнес-гості та сім'ї, які цінують зручне розташування, спокійну атмосферу та уважний сервіс.",
+		"image": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/740621489.jpg?k=f4dafaf6be342ffe8cf3e70f5ddcb09ae37e05ff607ec686f411e0fc5f862232&o="
 	},
 	"sections": [
 		{
 			"icon": "hotel",
-			"title": "Hotel",
+			"title": "Готель",
 			"items": [
-				"Comfortable rooms for short and long stays",
-				"Wi-Fi, air conditioning, and essential room facilities",
-				"Secure parking for guests",
-				"Easy check-in and guest support"
+				"Комфортні номери різних категорій",
+				"Цілодобова стійка реєстрації гостей",
+				"Ліфт",
+				"Сімейні номери",
+				"Номери для некурців",
+				"Кондиціонер та опалення",
+				"Безкоштовний Wi-Fi у всіх номерах",
+				"Вхід з електронною карткою"
 			]
 		},
 		{
 			"icon": "restaurant",
-			"title": "Restaurant",
+			"title": "Ресторан та харчування",
 			"items": [
-				"Daily service for breakfast, lunch, and dinner",
-				"Local and European-style cuisine",
-				"Seasonal dishes and drinks",
-				"Room service may be available for hotel guests"
+				"Ресторан на території готелю",
+				"Бар",
+				"Кав'ярня на території",
+				"Добрий сніданок",
+				"Сніданок у номері",
+				"Снек-бар",
+				"Вино та шампанське (оплачується окремо)",
+				"Дитяче меню (оплачується окремо)"
 			]
 		},
 		{
-			"icon": "celebration",
-			"title": "Banquet halls",
+			"icon": "local_parking",
+			"title": "Парковка",
 			"items": [
-				"Spaces for weddings, birthdays, and family events",
-				"Group menu and banquet options",
-				"Support with seating plan and timing",
-				"Atmosphere suitable for private celebrations"
-			]
-		},
-		{
-			"icon": "groups",
-			"title": "Events and conferences",
-			"items": [
-				"Space for business meetings and presentations",
-				"Coffee breaks, lunches, and dinners on request",
-				"Equipment options may be available",
-				"Flexible format for small and medium groups"
+				"Безкоштовна приватна автостоянка на території",
+				"Попереднє резервування місця не потрібне",
+				"Парковка на вулиці",
+				"Станція для заряджання електричних автомобілів",
+				"Паркування для осіб з інвалідністю"
 			]
 		},
 		{
 			"icon": "spa",
-			"title": "Relax zone",
+			"title": "Оздоровчі послуги",
 			"items": [
-				"Relaxation areas for guests",
-				"Sauna, pool, terrace, or outdoor spaces may be available",
-				"Suitable for quiet rest after work or travel",
-				"Family-friendly leisure options"
+				"Спа-лаунж / зона для релаксації",
+				"Сауна (оплачується окремо)",
+				"Хамам / турецька лазня (оплачується окремо)",
+				"Гідромасажна ванна / джакузі (оплачується окремо)"
+			]
+		},
+		{
+			"icon": "room_service",
+			"title": "Сервіси",
+			"items": [
+				"Обслуговування номерів",
+				"Послуги консьєржа",
+				"Індивідуальна реєстрація заїзду та виїзду",
+				"Експрес-реєстрація заїзду/виїзду",
+				"Запаковані ланчі",
+				"Пральня (оплачується окремо)",
+				"Факс та ксерокопіювання (оплачується окремо)"
+			]
+		},
+		{
+			"icon": "security",
+			"title": "Безпека",
+			"items": [
+				"Цілодобова охорона",
+				"Відеоспостереження ззовні будівлі та в зонах загального користування",
+				"Вхід з електронною карткою",
+				"Датчики диму",
+				"Вогнегасники"
 			]
 		}
 	],
 	"service": {
-		"title": "Our service",
-		"text": "Our team helps guests plan their stay, meal, celebration, or meeting with attention to comfort, timing, and important details."
+		"title": "Турбота про кожного гостя",
+		"text": "Ми прагнемо зробити кожне перебування комфортним — від бронювання номера до організації ділової зустрічі. Команда Pallada Hotel завжди готова допомогти спланувати відпочинок з увагою до деталей."
 	}
 }

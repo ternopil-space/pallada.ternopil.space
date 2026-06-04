@@ -3,21 +3,30 @@
 		<div class="grid gap-0 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)]">
 			<div class="relative min-h-[20rem] lg:min-h-[34rem]">
 				<img
-					class="object-cover"
-					[ngSrc]="room().image"
-					translate
-					[translate]="{ alt: room().imageAlt }"
-					fill
-					priority
-					sizes="(max-width: 1023px) 100vw, 56vw"
+					class="absolute inset-0 h-full w-full object-cover"
+					[src]="displayImage()"
+					[alt]="room().imageAlt"
 				/>
+
+				@if (roomImages().length > 1) {
+					<div class="absolute bottom-3 left-3 right-3 z-10 flex gap-2 overflow-x-auto pb-1">
+						@for (img of roomImages(); track img; let i = $index) {
+							<button
+								class="h-14 w-20 shrink-0 overflow-hidden rounded-[0.6rem] border-2 transition-all duration-200"
+								[class.border-white]="activeIndex() === i"
+								[class.border-transparent]="activeIndex() !== i"
+								[class.opacity-70]="activeIndex() !== i"
+								(click)="setActiveImage(i)"
+								[attr.aria-label]="'Фото ' + (i + 1)"
+							>
+								<img class="h-full w-full object-cover" [src]="img" alt="" />
+							</button>
+						}
+					</div>
+				}
 			</div>
 
 			<div class="flex flex-col justify-center px-4 py-6 sm:px-6 sm:py-8 lg:px-8 lg:py-10">
-				<a class="ui-btn ui-btn-secondary mb-6 self-start" routerLink="/rooms">
-					<span [translate]="'Back to rooms'">{{ 'Back to rooms' }}</span>
-				</a>
-
 				<p class="text-[12px] font-semibold uppercase tracking-[0.18em] text-[var(--c-secondary)]">
 					<span [translate]="'Room details'">{{ 'Room details' }}</span>
 				</p>
@@ -35,11 +44,19 @@
 				}
 
 				<div class="mt-6 flex flex-wrap gap-3">
-					<a class="ui-btn ui-btn-primary" href="tel:+380970000000">
-						<span [translate]="'Book now'">{{ 'Book now' }}</span>
+					<a
+						class="ui-btn ui-btn-primary"
+						href="https://www.booking.com/hotel/ua/pallada-hotel.uk.html"
+						target="_blank"
+						rel="noreferrer nofollow"
+					>
+						<span [translate]="'Book online'">{{ 'Book online' }}</span>
 					</a>
+					<button class="ui-btn ui-btn-secondary" type="button" (click)="scrollToBooking()">
+						<span [translate]="'Book'">{{ 'Book' }}</span>
+					</button>
 					<a class="ui-btn ui-btn-secondary" routerLink="/rooms">
-						<span [translate]="'Browse all rooms'">{{ 'Browse all rooms' }}</span>
+						<span [translate]="'See all rooms'">{{ 'See all rooms' }}</span>
 					</a>
 				</div>
 			</div>
@@ -96,7 +113,7 @@
 			</aside>
 		</div>
 
-		<div class="border-t border-[var(--c-border)] px-4 py-6 sm:px-6 lg:px-8">
+		<div id="room-booking" class="border-t border-[var(--c-border)] px-4 py-6 sm:px-6 lg:px-8">
 			<h2 class="text-xl font-semibold text-[var(--c-text-secondary)]">
 				<span [translate]="'Book this room'">{{ 'Book this room' }}</span>
 			</h2>

@@ -14,6 +14,6 @@ export class FooterComponent {
 		{ label: 'Gallery', icon: 'photo_library', route: '/gallery', exact: true },
 		{ label: 'Socials', icon: 'share', route: '/socials', exact: true },
 		{ label: 'Book', icon: 'book_online', route: '/book', exact: true },
-		{ label: 'Menu', icon: 'restaurant_menu', route: '/menu', exact: true },
+		{ label: 'Rooms', icon: 'hotel', route: '/rooms', exact: true },
 	];
 }

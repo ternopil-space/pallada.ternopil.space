@@ -117,21 +117,27 @@ export class BookComponent {
 
 	private _buildMessage(request: BookingRequest): string {
 		return [
-			'New booking request',
-			`Type: ${this._bookingKindLabel(request.kind)}`,
-			`Phone: ${request.phone}`,
-			request.name ? `Name: ${request.name}` : '',
-			request.date ? `Date: ${request.date}` : '',
-			request.time ? `Time: ${request.time}` : '',
-			request.guests ? `Guests: ${request.guests}` : '',
-			request.comment ? `Comment: ${request.comment}` : '',
+			`🏨 ${this.company.name}`,
+			`📋 Бронювання — ${this._bookingKindLabel(request.kind)}`,
+			'',
+			`📞 Телефон: ${request.phone}`,
+			request.name ? `👤 Ім'я: ${request.name}` : '',
+			request.date ? `📅 Дата: ${request.date}` : '',
+			request.time ? `🕐 Час: ${request.time}` : '',
+			request.guests ? `👥 Гостей: ${request.guests}` : '',
+			request.comment ? `💬 Коментар: ${request.comment}` : '',
 		]
-			.filter(Boolean)
+			.filter((line) => line !== undefined && line !== null)
 			.join('\n');
 	}
 
 	private _bookingKindLabel(kind: BookingKind): string {
-		return this.bookingOptions.find((option) => option.value === kind)?.label ?? kind;
+		const labels: Record<BookingKind, string> = {
+			table: 'Столик',
+			room: 'Номер',
+			spa: 'SPA',
+		};
+		return labels[kind] ?? kind;
 	}
 
 	private _normalizeRequest(request: BookingRequest): BookingRequest {

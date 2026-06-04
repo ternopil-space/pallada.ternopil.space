@@ -16,8 +16,8 @@
 					</span>
 				</p>
 				<div class="flex flex-wrap gap-3">
-					<a class="ui-btn ui-btn-primary" routerLink="/menu">
-						<span [translate]="'View menu'">{{ 'View menu' }}</span>
+					<a class="ui-btn ui-btn-primary" routerLink="/rooms">
+						<span [translate]="'See all rooms'">{{ 'See all rooms' }}</span>
 					</a>
 					<a class="ui-btn ui-btn-secondary" routerLink="/navigation">
 						<span [translate]="'Browse all pages'">{{ 'Browse all pages' }}</span>
@@ -28,12 +28,10 @@
 			<div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-1">
 				<img
 					class="h-52 w-full rounded-[1.2rem] border border-[var(--c-border)] object-cover sm:h-60 lg:h-56"
-					ngSrc="/gallery/demo-1.webp"
-					translate
-					[translate]="{ alt: 'Hospitality venue preview' }"
+					src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/740621489.jpg?k=f4dafaf6be342ffe8cf3e70f5ddcb09ae37e05ff607ec686f411e0fc5f862232&o="
+					alt="Pallada Hotel"
 					width="900"
 					height="600"
-					priority
 				/>
 				<div class="rounded-[1.2rem] border border-[var(--c-border)] bg-[var(--c-bg-primary)] p-4">
 					<p class="text-xs font-semibold uppercase tracking-[0.16em] text-[var(--c-text-muted)]">
@@ -45,12 +43,8 @@
 							<span class="ml-2">{{ company.phone }}</span>
 						</p>
 						<p>
-							<span class="font-semibold text-[var(--c-text-secondary)]" [translate]="'Email'">{{ 'Email' }}</span>
-							<span class="ml-2 break-all">{{ company.email }}</span>
-						</p>
-						<p>
 							<span class="font-semibold text-[var(--c-text-secondary)]" [translate]="'Address'">{{ 'Address' }}</span>
-							<span class="ml-2">{{ company.address }}</span>
+							<span class="ml-2" [translate]="company.address">{{ company.address }}</span>
 						</p>
 					</div>
 				</div>

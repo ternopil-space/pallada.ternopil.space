@@ -72,11 +72,17 @@ export class AboutComponent {
 }
 
 function _assetPath(path: string): string {
-	const normalized = path.trim().replace(/^\/+/, '');
+	const normalized = path.trim();
 
-	if (normalized.startsWith('assets/')) {
-		return `/${normalized.replace(/^assets\//, '')}`;
+	if (normalized.startsWith('http://') || normalized.startsWith('https://')) {
+		return normalized;
 	}
 
-	return `/${normalized}`;
+	const stripped = normalized.replace(/^\/+/, '');
+
+	if (stripped.startsWith('assets/')) {
+		return `/${stripped.replace(/^assets\//, '')}`;
+	}
+
+	return `/${stripped}`;
 }

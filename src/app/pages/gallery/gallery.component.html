@@ -12,11 +12,12 @@
 					photo_library
 				</span>
 			</div>
-
 			<p class="mt-4 text-[12px] font-semibold uppercase tracking-[0.18em] text-[var(--c-secondary)]">
 				<span [translate]="'Gallery'">{{ 'Gallery' }}</span>
 			</p>
-			<p class="mt-2 text-sm text-[var(--c-text-muted)]"><span [translate]="'Loading gallery...'">{{ 'Loading gallery...' }}</span></p>
+			<p class="mt-2 text-sm text-[var(--c-text-muted)]">
+				<span [translate]="'Loading gallery...'">{{ 'Loading gallery...' }}</span>
+			</p>
 		</section>
 	} @else if (exhibits().length) {
 		<section
@@ -34,17 +35,22 @@
 			</div>
 
 			<div class="grid gap-3 p-3 sm:grid-cols-2 sm:p-4 lg:grid-cols-3">
-				@for (exhibit of exhibits(); track exhibit.slug) {
+				@for (exhibit of exhibits(); track exhibit.slug; let i = $index) {
 					<figure
 						class="overflow-hidden rounded-[1rem] border border-[var(--c-border)] bg-[var(--c-bg-primary)]"
 					>
-						<app-image
-							imageClass="h-72 w-full object-cover sm:h-80"
-							[src]="exhibit.src"
-							translate [translate]="{ alt: exhibit.alt }"
-							[openLabel]="'Open photo in full screen'"
-							[closeLabel]="'Close full screen photo'"
-						/>
+						<button
+							class="block w-full cursor-zoom-in focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--c-secondary)]"
+							type="button"
+							(click)="open(i)"
+						>
+							<img
+								class="h-72 w-full object-cover sm:h-80"
+								[src]="exhibit.src"
+								[alt]="exhibit.alt"
+								loading="lazy"
+							/>
+						</button>
 					</figure>
 				}
 			</div>
@@ -60,14 +66,57 @@
 					photo_library
 				</span>
 			</div>
-
 			<p class="mt-4 text-[12px] font-semibold uppercase tracking-[0.18em] text-[var(--c-secondary)]">
 				<span [translate]="'Gallery'">{{ 'Gallery' }}</span>
 			</p>
-
 			<h1 class="mt-2 text-xl font-semibold text-[var(--c-text-secondary)]">
 				<span [translate]="'The gallery is currently empty'">{{ 'The gallery is currently empty' }}</span>
 			</h1>
 		</section>
 	}
 </main>
+
+@if (activeIndex() !== null) {
+	<div
+		class="fixed inset-0 z-50 flex items-center justify-center bg-black/90"
+		(click)="close()"
+	>
+		<button
+			class="absolute left-3 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white/10 p-3 text-white transition hover:bg-white/25 sm:left-6"
+			type="button"
+			aria-label="Попереднє фото"
+			(click)="$event.stopPropagation(); prev()"
+		>
+			<span class="material-symbols-outlined text-[28px]">chevron_left</span>
+		</button>
+
+		<img
+			class="max-h-[90vh] max-w-[90vw] rounded-[1rem] object-contain"
+			[src]="exhibits()[activeIndex()!].src"
+			[alt]="exhibits()[activeIndex()!].alt"
+			(click)="$event.stopPropagation()"
+		/>
+
+		<button
+			class="absolute right-3 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white/10 p-3 text-white transition hover:bg-white/25 sm:right-6"
+			type="button"
+			aria-label="Наступне фото"
+			(click)="$event.stopPropagation(); next()"
+		>
+			<span class="material-symbols-outlined text-[28px]">chevron_right</span>
+		</button>
+
+		<button
+			class="absolute right-3 top-3 z-10 rounded-full bg-white/10 p-2 text-white transition hover:bg-white/25 sm:right-6 sm:top-6"
+			type="button"
+			aria-label="Закрити"
+			(click)="close()"
+		>
+			<span class="material-symbols-outlined text-[24px]">close</span>
+		</button>
+
+		<p class="absolute bottom-4 left-1/2 -translate-x-1/2 text-sm text-white/60">
+			{{ activeIndex()! + 1 }} / {{ exhibits().length }}
+		</p>
+	</div>
+}

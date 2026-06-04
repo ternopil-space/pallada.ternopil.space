@@ -78,7 +78,15 @@ export class SocialsComponent {
 	}
 
 	private _buildMessage(request: SocialContactRequest): string {
-		return ['New contact message', `Phone: ${request.phone}`, request.message].filter(Boolean).join('\n');
+		return [
+			`🏨 ${this.company.name}`,
+			`📬 Контактна форма`,
+			'',
+			`📞 Телефон: ${request.phone}`,
+			request.message ? `💬 Повідомлення: ${request.message}` : '',
+		]
+			.filter((line) => line !== undefined && line !== null)
+			.join('\n');
 	}
 
 	private _normalizeRequest(request: SocialContactRequest): SocialContactRequest {

@@ -1,5 +1,5 @@
 import { NgOptimizedImage } from '@angular/common';
-import { ChangeDetectionStrategy, Component, computed, effect, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, effect, inject, signal } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { Title } from '@angular/platform-browser';
 import { ActivatedRoute, RouterLink } from '@angular/router';
@@ -39,6 +39,25 @@ export class RoomComponent {
 
 		return fromService ?? (slug ? findFallbackRoomBySlug(slug) : null) ?? _fallbackRoom;
 	});
+	protected readonly roomImages = computed(() => {
+		const room = this.room() as any;
+		const main: string = room.image ?? '';
+		const extra: string[] = Array.isArray(room.images) ? room.images : [];
+		return [main, ...extra].filter(Boolean);
+	});
+	protected readonly activeIndex = signal(0);
+	protected readonly displayImage = computed(
+		() => this.roomImages()[this.activeIndex()] ?? this.roomImages()[0] ?? '',
+	);
+
+	protected setActiveImage(index: number): void {
+		this.activeIndex.set(index);
+	}
+
+	protected scrollToBooking(): void {
+		document.getElementById('room-booking')?.scrollIntoView({ behavior: 'smooth' });
+	}
+
 	protected readonly facts = computed(() =>
 		[
 			{ label: 'Room size', value: this.room().size },
@@ -52,6 +71,11 @@ export class RoomComponent {
 	constructor() {
 		effect(() => {
 			this._roomService.loadTranslations();
+		});
+
+		effect(() => {
+			this.room();
+			this.activeIndex.set(0);
 		});
 
 		effect(() => {

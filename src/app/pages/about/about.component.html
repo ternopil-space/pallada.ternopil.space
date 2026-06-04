@@ -42,9 +42,8 @@
 			@if (page.intro.image && !imageUnavailable()) {
 				<img
 					class="about__image"
-					[ngSrc]="introImageSrc"
-					translate
-					[translate]="{ alt: page.intro.title }"
+					[src]="introImageSrc"
+					[alt]="page.intro.title"
 					width="760"
 					height="520"
 					loading="lazy"

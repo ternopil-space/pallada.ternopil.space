@@ -1,17 +1,47 @@
 [
 	{
-		"slug": "horeca-bar-service-photo",
-		"src": "gallery/demo-1.webp",
-		"alt": "Horeca bar service photo"
+		"slug": "pallada-photo-0",
+		"src": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/740621489.jpg?k=f4dafaf6be342ffe8cf3e70f5ddcb09ae37e05ff607ec686f411e0fc5f862232&o=",
+		"alt": "Pallada Hotel"
 	},
 	{
-		"slug": "horeca-hotel-reception-photo-1",
-		"src": "gallery/demo-2.webp",
-		"alt": "Horeca hotel reception photo"
+		"slug": "pallada-photo-1",
+		"src": "gallery/1.jpg",
+		"alt": "Pallada Hotel"
 	},
 	{
-		"slug": "horeca-hotel-reception-photo-2",
-		"src": "gallery/demo-3.webp",
-		"alt": "Horeca hotel reception photo"
+		"slug": "pallada-photo-2",
+		"src": "gallery/2.jpg",
+		"alt": "Pallada Hotel"
+	},
+	{
+		"slug": "pallada-photo-3",
+		"src": "gallery/3.jpg",
+		"alt": "Pallada Hotel"
+	},
+	{
+		"slug": "pallada-photo-4",
+		"src": "gallery/4.jpg",
+		"alt": "Pallada Hotel"
+	},
+	{
+		"slug": "pallada-photo-5",
+		"src": "gallery/5.jpg",
+		"alt": "Pallada Hotel"
+	},
+	{
+		"slug": "pallada-photo-6",
+		"src": "gallery/6.jpg",
+		"alt": "Pallada Hotel"
+	},
+	{
+		"slug": "pallada-photo-7",
+		"src": "gallery/7.jpg",
+		"alt": "Pallada Hotel"
+	},
+	{
+		"slug": "pallada-photo-8",
+		"src": "gallery/8.jpg",
+		"alt": "Pallada Hotel"
 	}
 ]

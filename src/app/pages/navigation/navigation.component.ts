@@ -19,7 +19,7 @@ export class NavigationComponent {
 		{ label: 'FAQ', icon: 'help', route: '/questions' },
 		{ label: 'Rules', icon: 'gavel', route: '/rules' },
 
-		{ label: 'Rooms', icon: 'hotel', route: '/rooms' },
+		{ label: 'Menu', icon: 'restaurant_menu', route: '/menu' },
 		{ label: 'Discounts', icon: 'local_offer', route: '/discounts' },
 
 		{ label: 'Team', icon: 'group', route: '/team' },

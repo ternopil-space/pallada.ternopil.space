@@ -143,13 +143,15 @@ export class SpaComponent {
 
 	private _buildMessage(request: SpaBookingRequest): string {
 		return [
-			'New spa request',
-			`Phone: ${request.phone}`,
-			request.date ? `Date: ${request.date}` : '',
-			request.time ? `Time: ${request.time}` : '',
-			request.message ? `Comment: ${request.message}` : '',
+			`🏨 ${this.company.name}`,
+			`💆 ${this.page.title}`,
+			'',
+			`📞 Телефон: ${request.phone}`,
+			request.date ? `📅 Дата: ${request.date}` : '',
+			request.time ? `🕐 Час: ${request.time}` : '',
+			request.message ? `💬 Коментар: ${request.message}` : '',
 		]
-			.filter(Boolean)
+			.filter((line) => line !== undefined && line !== null)
 			.join('\n');
 	}
 

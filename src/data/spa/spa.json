@@ -1,148 +1,118 @@
 {
-	"eyebrow": "Wellness",
-	"title": "Spa and sauna",
-	"description": "A calm wellness area for rest, warmth, recovery, and private time with family or friends.",
+	"eyebrow": "Оздоровчі послуги",
+	"title": "Спа та оздоровлення",
+	"description": "Спа-лаунж, сауна, хамам і гідромасажна ванна для відпочинку та відновлення гостей готелю Pallada.",
 	"tags": [
-		"Hammam",
-		"Dry sauna",
-		"Wet sauna"
+		"Спа-лаунж",
+		"Сауна",
+		"Хамам",
+		"Гідромасажна ванна"
 	],
 	"services": [
 		{
+			"slug": "spa-lounge",
+			"title": "Спа-лаунж / зона для релаксації",
+			"subtitle": "Відпочинок та відновлення",
+			"description": "Спа-лаунж готелю Pallada — простір для спокійного відпочинку після роботи або дороги. Зона релаксації підходить для самостійного відновлення або відпочинку з близькими.",
+			"features": [
+				"Зона відпочинку та релаксації",
+				"Спокійна атмосфера",
+				"Доступно для гостей готелю",
+				"Підходить для відпочинку після насиченого дня"
+			],
+			"schedule": [
+				{
+					"days": "Щодня",
+					"items": [
+						{
+							"label": "Уточнюйте при бронюванні",
+							"price": "Оплачується окремо"
+						}
+					]
+				}
+			],
+			"note": "Для уточнення вартості, доступних годин та умов бронювання зверніться на рецепцію готелю.",
+			"images": []
+		},
+		{
 			"slug": "hammam",
-			"title": "Hammam",
-			"subtitle": "Traditional steam relaxation",
-			"description": "Hammam is a traditional warm steam experience with gentle heat and high humidity. It helps guests slow down, relax the body, and enjoy a quiet wellness ritual.",
+			"title": "Хамам / турецька лазня",
+			"subtitle": "Традиційний паровий ритуал",
+			"description": "Хамам готелю Pallada — традиційна турецька парова лазня з м'яким теплом і вологою атмосферою. Допомагає розслабити тіло, покращити кровообіг і зняти напругу після активного дня.",
 			"features": [
-				"Low temperature steam",
-				"High humidity",
-				"Warm pool or hydromassage area may be available",
-				"Rest room",
-				"Contrast pouring buckets"
+				"М'яке парове тепло",
+				"Висока вологість повітря",
+				"Розслаблення м'язів і суглобів",
+				"Підходить для гостей будь-якого віку",
+				"Доступно за попереднім замовленням"
 			],
 			"schedule": [
 				{
-					"days": "Monday — Thursday",
+					"days": "Щодня",
 					"items": [
 						{
-							"label": "Before 17:00",
-							"price": "From 700 UAH/hour"
-						},
-						{
-							"label": "After 17:00",
-							"price": "From 950 UAH/hour"
-						}
-					]
-				},
-				{
-					"days": "Friday — Sunday",
-					"items": [
-						{
-							"label": "Around the clock",
-							"price": "From 950 UAH/hour"
+							"label": "За попереднім замовленням",
+							"price": "Оплачується окремо"
 						}
 					]
 				}
 			],
-			"note": "Prices, capacity, and extra guest fees may vary by business. Please confirm details before booking.",
-			"images": [
-				"assets/images/spa/hammam-1.jpg",
-				"assets/images/spa/hammam-2.jpg",
-				"assets/images/spa/hammam-3.jpg",
-				"assets/images/spa/hammam-4.jpg"
-			]
+			"note": "Для уточнення вартості, доступних годин та умов бронювання зверніться на рецепцію готелю.",
+			"images": []
 		},
 		{
-			"slug": "dry-sauna",
-			"title": "Dry sauna",
-			"subtitle": "Classic hot sauna experience",
-			"description": "Dry sauna is a classic wellness option with high temperature and low humidity. It is suitable for guests who enjoy deep warmth, quiet rest, and a traditional sauna atmosphere.",
+			"slug": "sauna",
+			"title": "Сауна",
+			"subtitle": "Класичний фінський відпочинок",
+			"description": "Сауна готелю Pallada — класична фінська лазня з високою температурою та сухим повітрям. Ідеально підходить для глибокого прогрівання, очищення організму та відпочинку після тривалої подорожі.",
 			"features": [
-				"High temperature",
-				"Low air humidity",
-				"Cold plunge pool may be available",
-				"Rest room",
-				"Comfortable space for small groups"
+				"Висока температура, сухе повітря",
+				"Класична фінська атмосфера",
+				"Підходить для відновлення після дороги",
+				"Доступно за попереднім замовленням"
 			],
 			"schedule": [
 				{
-					"days": "Monday — Thursday",
+					"days": "Щодня",
 					"items": [
 						{
-							"label": "Before 17:00",
-							"price": "From 450 UAH/hour"
-						},
-						{
-							"label": "After 17:00",
-							"price": "From 550 UAH/hour"
-						}
-					]
-				},
-				{
-					"days": "Friday — Sunday",
-					"items": [
-						{
-							"label": "Around the clock",
-							"price": "From 550 UAH/hour"
+							"label": "За попереднім замовленням",
+							"price": "Оплачується окремо"
 						}
 					]
 				}
 			],
-			"note": "Prices, capacity, and extra guest fees may vary by business. Please confirm details before booking.",
-			"images": [
-				"assets/images/spa/dry-sauna-1.jpg",
-				"assets/images/spa/dry-sauna-2.jpg",
-				"assets/images/spa/dry-sauna-3.jpg",
-				"assets/images/spa/dry-sauna-4.jpg"
-			]
+			"note": "Для уточнення вартості, доступних годин та умов бронювання зверніться на рецепцію готелю.",
+			"images": []
 		},
 		{
-			"slug": "wet-sauna",
-			"title": "Wet sauna",
-			"subtitle": "Warm humid sauna rest",
-			"description": "Wet sauna combines warmth with higher humidity. It creates a softer sauna feeling and is a good choice for guests who prefer steam, gentle heat, and a relaxing rhythm.",
+			"slug": "jacuzzi",
+			"title": "Гідромасажна ванна / джакузі",
+			"subtitle": "Розслаблення та гідромасаж",
+			"description": "Гідромасажна ванна готелю Pallada поєднує теплу воду з масажними струменями для глибокого розслаблення м'язів і суглобів. Доступна в окремих номерах та в зоні спа.",
 			"features": [
-				"Medium temperature",
-				"High air humidity",
-				"Cold plunge pool may be available",
-				"Rest room",
-				"Good option for calm recovery"
+				"Гідромасажні струмені",
+				"Розслаблення м'язів і суглобів",
+				"Доступна в люкс-номерах",
+				"Доступна в зоні спа за замовленням"
 			],
 			"schedule": [
 				{
-					"days": "Monday — Thursday",
+					"days": "Щодня",
 					"items": [
 						{
-							"label": "Before 17:00",
-							"price": "From 550 UAH/hour"
-						},
-						{
-							"label": "After 17:00",
-							"price": "From 650 UAH/hour"
-						}
-					]
-				},
-				{
-					"days": "Friday — Sunday",
-					"items": [
-						{
-							"label": "Around the clock",
-							"price": "From 650 UAH/hour"
+							"label": "За попереднім замовленням",
+							"price": "Оплачується окремо"
 						}
 					]
 				}
 			],
-			"note": "Prices, capacity, and extra guest fees may vary by business. Please confirm details before booking.",
-			"images": [
-				"assets/images/spa/wet-sauna-1.jpg",
-				"assets/images/spa/wet-sauna-2.jpg",
-				"assets/images/spa/wet-sauna-3.jpg",
-				"assets/images/spa/wet-sauna-4.jpg"
-			]
+			"note": "Для уточнення вартості, доступних годин та умов бронювання зверніться на рецепцію готелю.",
+			"images": []
 		}
 	],
 	"booking": {
-		"title": "Booking and details",
-		"text": "For current prices, available time slots, guest capacity, and service rules, please contact the team before your visit."
+		"title": "Бронювання оздоровчих послуг",
+		"text": "Для бронювання спа-послуг, уточнення вартості та доступних часових слотів зверніться на рецепцію готелю або зателефонуйте нам."
 	}
 }
